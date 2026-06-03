@@ -32,15 +32,13 @@ export default function AboutSection() {
             <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
               I completed my Bachelor of Engineering in Computer Science at
               Bangalore Institute of Technology (CGPA: 8.25/10) and have
-              published research on crowd monitoring using deep learning, which
-              was recognized with a national-level award.
+              published research on crowd monitoring using deep learning.
             </p>
 
             <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
               Beyond code, I&apos;m interested in mentoring and exploring how
               engineering can address societal challenges. Feel free to reach
-              out if you&apos;d like to discuss opportunities or just have a
-              conversation.
+              out.
             </p>
           </div>
 

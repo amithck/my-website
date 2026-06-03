@@ -1,10 +1,5 @@
 import { PortfolioData, SiteMetadata } from '@/types';
 
-/**
- * Portfolio data extracted from LaTeX resume
- * This serves as the source of truth for portfolio content
- * Can be overridden by frontmatter in content files
- */
 export const portfolioData: PortfolioData = {
   personalInfo: {
     name: 'Amith C Kowshik',
