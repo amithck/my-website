@@ -63,7 +63,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="section bg-white dark:bg-slate-950">
+    <section id="contact" className="section bg-slate-50 dark:bg-slate-900/50">
       <div className="container-narrow">
         <div className="mb-12 text-center">
           <h2 className="section-title">Get In Touch</h2>

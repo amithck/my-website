@@ -3,12 +3,13 @@
  * Extracts structured data from LaTeX resume files
  */
 
-import { PortfolioData, PersonalInfo, ExperienceEntry, ProjectEntry, PublicationEntry, SkillCategory } from '@/types';
+import { PortfolioData, PersonalInfo, ExperienceEntry, ProjectEntry, PublicationEntry, SkillCategory, ActivityEntry } from '@/types';
 
 interface ParsedResume {
   personalInfo: Partial<PersonalInfo>;
   education: any[];
   experience: ExperienceEntry[];
+  activities: ActivityEntry[];
   projects: ProjectEntry[];
   publications: PublicationEntry[];
   skills: SkillCategory[];
@@ -280,6 +281,7 @@ export function parseLatexResume(latexContent: string): ParsedResume {
     personalInfo: parseHeading(latexContent),
     education: [],
     experience: parseExperience(latexContent),
+    activities: [],
     projects: parseProjects(latexContent),
     publications: parsePublications(latexContent),
     skills: parseSkills(latexContent),
@@ -298,6 +300,7 @@ export function mergeResumeData(existing: PortfolioData, parsed: ParsedResume): 
     },
     education: parsed.education.length > 0 ? parsed.education : existing.education,
     experience: parsed.experience.length > 0 ? parsed.experience : existing.experience,
+    activities: parsed.activities.length > 0 ? parsed.activities : existing.activities,
     projects: parsed.projects.length > 0 ? parsed.projects : existing.projects,
     publications: parsed.publications.length > 0 ? parsed.publications : existing.publications,
     skills: parsed.skills.length > 0 ? parsed.skills : existing.skills,

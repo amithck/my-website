@@ -42,6 +42,15 @@ export interface ExperienceEntry {
   highlights?: string[];
 }
 
+export interface ActivityEntry {
+  organization: string;
+  role: string;
+  startDate: string;
+  endDate: string;
+  location?: string;
+  description: string[];
+}
+
 export interface ProjectEntry {
   id: string;
   title: string;
@@ -110,6 +119,7 @@ export interface PortfolioData {
   publications: PublicationEntry[];
   skills: SkillCategory[];
   awards: AwardEntry[];
+  activities: ActivityEntry[];
 }
 
 export interface SiteMetadata {

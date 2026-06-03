@@ -73,6 +73,18 @@ export const portfolioData: PortfolioData = {
       highlights: ['30+ applications tracked', '5+ teams supported'],
     },
   ],
+  activities: [
+    {
+      organization: 'Diminished 7th — Music Club, Bangalore Institute of Technology',
+      role: 'President & Band Lead',
+      startDate: 'Jun 2022',
+      endDate: 'Jun 2024',
+      location: 'Bangalore, India',
+      description: [
+        'Served as President and Band Lead of the college music club, overseeing club operations, organizing performances, and leading the band across college events and cultural fests.',
+      ],
+    },
+  ],
   projects: [
     {
       id: 'crowd-control-monitoring',

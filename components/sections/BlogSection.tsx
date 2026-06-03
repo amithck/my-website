@@ -7,7 +7,7 @@ export default async function BlogSection() {
   const recentPosts = posts.slice(0, 2);
 
   return (
-    <section id="blog" className="section bg-slate-50 dark:bg-slate-900/50">
+    <section id="blog" className="section bg-white dark:bg-slate-950">
       <div className="container-narrow">
         <h2 className="section-title">Latest Blog Posts</h2>
 
