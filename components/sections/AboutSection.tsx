@@ -36,9 +36,8 @@ export default function AboutSection() {
             </p>
 
             <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
-              Beyond code, I&apos;m interested in mentoring and exploring how
-              engineering can address societal challenges. Feel free to reach
-              out.
+              Beyond code, I&apos;m interested in exploring how engineering can
+              address societal challenges. Feel free to reach out.
             </p>
           </div>
 
