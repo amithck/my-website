@@ -293,14 +293,25 @@ Edit [`app/layout.tsx`](app/layout.tsx) to update site metadata.
 
 ### Vercel (Recommended)
 
+Vercel supports Next.js and serverless API routes, so this site is a good fit.
+
 1. Push code to GitHub
-2. Import project in Vercel
-3. Set environment variables if needed
-4. Deploy!
+2. Import the project in Vercel
+3. Set these environment variables in the Vercel dashboard:
+   - `SITE_URL`
+   - `GOOGLE_SITE_VERIFICATION` (optional)
+   - `SMTP_HOST`
+   - `SMTP_PORT`
+   - `SMTP_USER`
+   - `SMTP_PASS`
+   - `EMAIL_TO` (optional)
+4. Deploy
 
 ```bash
 vercel
 ```
+
+The contact form backend at `/api/contact` will work on Vercel. If you want a static-only deploy, use GitHub Pages instead, but the API route won’t work there.
 
 ### Docker
 
