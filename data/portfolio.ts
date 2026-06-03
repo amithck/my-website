@@ -139,8 +139,12 @@ export const portfolioData: PortfolioData = {
       skills: ['Docker', 'Kubernetes', 'AWS', 'CI/CD'],
     },
     {
-      name: 'AI/ML & Monitoring',
-      skills: ['Deep Learning', 'Computer Vision', 'Time Series', 'Prometheus', 'Grafana', 'Alertmanager'],
+      name: 'Monitoring',
+      skills: ['Prometheus', 'Grafana', 'Alertmanager'],
+    },
+    {
+      name: 'AI/ML',
+      skills: ['Deep Learning', 'Computer Vision', 'Time Series Analysis', 'Predictive Analysis'],
     },
   ],
   awards: [
