@@ -8,7 +8,7 @@ export const portfolioData: PortfolioData = {
     email: 'amith.kowshik@gmail.com',
     phone: '+91 95915 09497',
     tagline: 'Backend Developer',
-    bio: 'Backend engineer at F5 Networks with expertise in distributed systems, microservices, and ML-driven insights. AI Enthusiast. CGPA 8.25/10.',
+    bio: 'Backend engineer at F5 Networks with expertise in distributed systems, microservices, and ML-driven insights. AI Enthusiast.',
     socials: {
       github: 'https://github.com/amithck',
       linkedin: 'https://linkedin.com/in/amithkowshik',
