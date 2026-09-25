@@ -23,7 +23,7 @@ export default function AboutSection() {
             </p>
 
             <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
-              Currently a <strong>graduate student in Artificial Intelligence</strong> 
+              Currently a <strong>graduate student in Artificial Intelligence </strong> 
               at the University of Maryland, College Park, I focus on research in machine 
               learning and computer vision. My interests span distributed systems, system design, 
               and AI-driven applications.
