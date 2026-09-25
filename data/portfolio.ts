@@ -17,6 +17,16 @@ export const portfolioData: PortfolioData = {
   },
   education: [
     {
+      school: 'University of Maryland, College Park',
+      degree: 'Master of Science',
+      field: 'Artificial Intelligence',
+      startDate: 'Aug 2026',
+      endDate: 'Present',
+      location: 'College Park, MD, USA',
+      gpa: '0.0 (ongoing first semester)',
+      highlights: [],
+    },
+    {
       school: 'Bangalore Institute of Technology',
       degree: 'Bachelor of Engineering',
       field: 'Computer Science',
@@ -32,7 +42,7 @@ export const portfolioData: PortfolioData = {
       company: 'F5 Networks',
       position: 'Software Development Engineer II',
       startDate: 'Jul 2024',
-      endDate: 'Present',
+      endDate: 'Aug 2026',
       location: 'Bangalore',
       description: [
         'Engineered network defense and private cloud products using Golang microservices',
@@ -86,6 +96,58 @@ export const portfolioData: PortfolioData = {
     },
   ],
   projects: [
+    {
+      id: 'calibration-robustness-gbdt',
+      title: 'Calibration Robustness under Label Noise in GBDTs',
+      description: 'Research on post-hoc calibration methods for gradient boosted decision trees under label noise, benchmarked across OpenML datasets and noise regimes.',
+      longDescription:
+        'Designed three novel post-hoc calibration methods—NAC, RIC, and IDC—for gradient boosted decision trees under label noise. Benchmarked across 19 OpenML datasets, 3 GBDTs, 3 noise types, and 4 noise rates, yielding 35,235 experimental observations. Established RIC as the lowest-ECE method on clean data and under severe asymmetric noise, and showed beta calibration degrades 8.1×. Verified via Wilcoxon signed-rank tests with Holm correction, with 180/225 comparisons significant at α = 0.05.',
+      technologies: ['Machine Learning', 'Gradient Boosted Decision Trees', 'Calibration', 'Statistical Testing', 'OpenML'],
+      highlights: [
+        'Three novel calibration methods: NAC, RIC, IDC',
+        '35,235 benchmark observations across 19 datasets',
+        'RIC achieved lowest ECE on clean and severe asymmetric-noise settings',
+        'Wilcoxon signed-rank validation with Holm correction',
+      ],
+      startDate: 'Sep 2026',
+      endDate: 'Present',
+      featured: true,
+      year: '2026',
+    },
+    {
+      id: 'adaptive-grounding-diagnostics',
+      title: 'Adaptive Grounding Diagnostics for Vision-Language Models',
+      description: 'Research on inference-time diagnostics and routing for VLMs to distinguish grounded, spuriously decodable, and ungrounded spatial reasoning regimes.',
+      longDescription:
+        'Investigating lightweight classifiers trained on VLM internal activations to distinguish grounded, spuriously decodable, and ungrounded spatial reasoning regimes. Designing an inference-time routing system for Qwen2.5-VL-7B-Instruct and LLaVA-1.6-Mistral-7B to apply regime-appropriate corrections without fine-tuning. Evaluating the approach on VSR, What’sUp, and CV-Bench to improve robustness in multimodal reasoning tasks.',
+      technologies: ['Vision-Language Models', 'Multimodal AI', 'Inference-Time Routing', 'Spatial Reasoning', 'LLM Evaluation'],
+      highlights: [
+        'Lightweight activation-based classification',
+        'Routing without fine-tuning',
+        'Evaluation on VSR, What’sUp, and CV-Bench',
+      ],
+      startDate: 'Sep 2026',
+      endDate: 'Present',
+      featured: true,
+      year: '2026',
+    },
+    {
+      id: 'ethical-dimensions-ai',
+      title: 'Ethical Dimensions of AI: A Critical Examination',
+      description: 'Analytical research paper examining structural, political, and economic factors influencing ethical risks in AI and automated decision-making.',
+      longDescription:
+        'Authoring an analytical research paper critically examining the structural, political, and economic forces shaping a significant ethical issue in AI, including algorithmic bias, surveillance, data privacy, and governance of automated decision-making. Synthesizing scholarly literature and theoretical frameworks to analyze implications for equity, accountability, and public trust in AI systems. Connecting academic theory to concrete real-world cases to develop evidence-based recommendations for more just and responsible AI development and deployment.',
+      technologies: ['AI Ethics', 'Policy Research', 'Academic Writing', 'Critical Analysis', 'Responsible AI'],
+      highlights: [
+        'Structural, political, and economic analysis of AI ethics',
+        'Evidence-based recommendations for accountable deployment',
+        'Bridges theory and real-world governance challenges',
+      ],
+      startDate: 'Aug 2026',
+      endDate: 'Present',
+      featured: true,
+      year: '2026',
+    },
     {
       id: 'crowd-control-monitoring',
       title: 'Crowd Control and Monitoring using Deep Learning',
