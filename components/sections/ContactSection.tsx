@@ -67,7 +67,7 @@ export default function ContactSection() {
       <div className="container-narrow">
         <div className="mb-12 text-center">
           <h2 className="section-title">Get In Touch</h2>
-          <p className="section-subtitle">
+          <p className="section-subtitle mx-auto text-center">
             I&apos;m always interested in hearing about new projects, research
             collaborations, and opportunities. Feel free to reach out!
           </p>
