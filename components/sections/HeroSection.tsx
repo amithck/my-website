@@ -97,8 +97,8 @@ export default function HeroSection() {
             </a>
 
             {/* Resume Button */}
-            <a href="/resume.pdf" download className="btn btn-outline btn-lg">
-              Resume
+            <a href="/cv.pdf" download className="btn btn-outline btn-lg">
+              Cirriculum Vitae
             </a>
           </div>
         </div>
