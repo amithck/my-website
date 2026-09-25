@@ -23,10 +23,10 @@ export default function AboutSection() {
             </p>
 
             <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed">
-              Currently at <strong>F5 Networks</strong>, I work on network
-              defense and cloud infrastructure, designing microservices that
-              handle millions of requests daily. My interests span distributed
-              systems, system design, and computer vision applications.
+              Currently a <strong>graduate student in Artificial Intelligence</strong> 
+              at the University of Maryland, College Park, I focus on research in machine 
+              learning and computer vision. My interests span distributed systems, system design, 
+              and AI-driven applications.
             </p>
 
             <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed">

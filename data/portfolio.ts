@@ -3,12 +3,12 @@ import { PortfolioData, SiteMetadata } from '@/types';
 export const portfolioData: PortfolioData = {
   personalInfo: {
     name: 'Amith C Kowshik',
-    title: 'Software Development Engineer II',
+    title: 'Graduate Student in Artificial Intelligence',
     location: 'Bangalore, Karnataka',
     email: 'amith.kowshik@gmail.com',
     phone: '+91 95915 09497',
-    tagline: 'Backend Developer',
-    bio: 'Backend engineer at F5 Networks with expertise in distributed systems, microservices, and ML-driven insights. AI Enthusiast.',
+    tagline: 'Artificial Intelligence Student',
+    bio: 'Graduate student in Artificial Intelligence at the University of Maryland, College Park.',
     socials: {
       github: 'https://github.com/amithck',
       linkedin: 'https://linkedin.com/in/amithkowshik',
@@ -236,19 +236,22 @@ export const portfolioData: PortfolioData = {
  * Site metadata for SEO and general configuration
  */
 export const siteMetadata: SiteMetadata = {
-  title: 'Amith C Kowshik - Backend Engineer & Researcher',
-  description: 'Backend developer at F5 Networks with expertise in distributed systems and AI-driven insights. Published researcher in computer vision.',
+  title: 'Amith C Kowshik - Grad Student in Artificial Intelligence',
+  description: 'Graduate student in Artificial Intelligence at the University of Maryland, College Park.',
   author: 'Amith C Kowshik',
   siteUrl: process.env.SITE_URL || 'https://portfolio.example.com',
   locale: 'en-US',
   keywords: [
-    'backend developer',
+    'graduate student',
+    'artificial intelligence',
+    'machine learning',
+    'computer vision',
     'golang',
     'microservices',
     'computer vision',
     'machine learning',
     'system design',
     'researcher',
-    'Bangalore',
+    'College Park',
   ],
 };
