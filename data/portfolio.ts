@@ -23,7 +23,7 @@ export const portfolioData: PortfolioData = {
       startDate: 'Aug 2026',
       endDate: 'Present',
       location: 'College Park, MD, USA',
-      gpa: '0.0 (ongoing first semester)',
+      gpa: 'Ongoing First Semester',
       highlights: [],
     },
     {

@@ -5,7 +5,6 @@ import { portfolioData } from "@/data/portfolio";
 export default function AboutSection() {
   const { bio } = portfolioData.personalInfo;
   const { education } = portfolioData;
-  const edu = education[0];
 
   return (
     <section
@@ -48,24 +47,27 @@ export default function AboutSection() {
               <h3 className="font-semibold text-slate-900 dark:text-white mb-2">
                 Education
               </h3>
-              {edu && (
-                <div>
-                  <p className="font-medium text-slate-900 dark:text-white">
-                    {edu.degree} in {edu.field}
-                  </p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    {edu.school}
-                  </p>
-                  <p className="text-sm text-slate-500 dark:text-slate-500 mt-2">
-                    {edu.startDate} — {edu.endDate}
-                  </p>
-                  {edu.gpa && (
-                    <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">
-                      <span className="font-medium">CGPA:</span> {edu.gpa}
+              <div className="space-y-5">
+                {education.map((edu) => (
+                  <div key={`${edu.school}-${edu.degree}`}>
+                    <p className="font-medium text-slate-900 dark:text-white">
+                      {edu.degree} in {edu.field}
                     </p>
-                  )}
-                </div>
-              )}
+                    <p className="text-sm text-slate-600 dark:text-slate-400">
+                      {edu.school}
+                    </p>
+                    <p className="text-sm text-slate-500 dark:text-slate-500 mt-2">
+                      {edu.startDate} — {edu.endDate}
+                    </p>
+                    {edu.gpa && (
+                      <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">
+                        <span className="font-medium">{edu.degree.includes('Master') ? 'GPA' : 'CGPA'}:</span>{' '}
+                        {edu.gpa}
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Highlights */}
