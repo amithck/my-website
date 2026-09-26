@@ -2,34 +2,35 @@ import { portfolioData } from "@/data/portfolio";
 
 export default function HeroSection() {
   const { name, tagline, bio, socials } = portfolioData.personalInfo;
+  const [firstName, ...remainingName] = name.split(" ");
 
   return (
-    <section className="pt-32 pb-20 sm:pt-40 sm:pb-32 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900 relative overflow-hidden">
+    <section className="home-hero pt-32 pb-20 sm:pt-44 sm:pb-32 bg-[#f4f1ea] dark:bg-[#101b1d] relative overflow-hidden border-b border-[#cbd0c7] dark:border-slate-700">
       {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl dark:bg-blue-500/5" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl dark:bg-purple-500/5" />
-      </div>
+      <div className="absolute right-0 top-0 h-full w-1/3 border-l border-[#cbd0c7] dark:border-slate-700 opacity-60" />
+      <div className="hero-flight-path" aria-hidden="true"><span /><span /><span /></div>
 
       <div className="container-wide relative z-10">
-        <div className="max-w-3xl mx-auto text-center animate-fade-in">
+        <div className="max-w-6xl mx-auto animate-fade-in">
           {/* Tagline */}
-          <div className="mb-6 inline-block">
+          <div className="mb-8 flex items-center gap-3">
+            <span className="font-mono text-xs text-[#e85d3f]">001</span>
             <span className="badge badge-primary">{tagline}</span>
+            <span className="font-mono text-xs text-slate-500">/ portfolio index</span>
           </div>
 
           {/* Name */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-slate-900 dark:text-white">
-            {name}
+          <h1 className="max-w-5xl text-6xl sm:text-8xl lg:text-[9.5rem] leading-[0.86] font-extrabold tracking-[-0.08em] mb-8 text-[#142326] dark:text-white">
+            {firstName}<br /><span className="text-[#e85d3f]">{remainingName.join(" ")}</span>
           </h1>
 
           {/* Bio */}
-          <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 mb-10 leading-relaxed max-w-xl">
             {bio}
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row items-start gap-4 mb-14">
             <a href="#contact" className="btn btn-primary btn-lg">
               Get In Touch
             </a>
@@ -39,7 +40,7 @@ export default function HeroSection() {
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center gap-6">
             {socials.github && (
               <a
                 href={socials.github}
@@ -98,7 +99,7 @@ export default function HeroSection() {
 
             {/* Resume Button */}
             <a href="/cv.pdf" download className="btn btn-outline btn-lg">
-              Cirriculum Vitae
+              Curriculum Vitae
             </a>
           </div>
         </div>

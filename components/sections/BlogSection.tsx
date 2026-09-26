@@ -11,37 +11,39 @@ export default async function BlogSection() {
       <div className="container-narrow">
         <h2 className="section-title">Latest Blog Posts</h2>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="border-t border-[#cbd0c7] dark:border-slate-700 mb-12">
           {recentPosts.map((post) => (
             <article
               key={post.slug}
-              className="card card-hover card-p h-full flex flex-col group"
+              className="grid md:grid-cols-[8rem_1fr_auto] gap-5 md:gap-10 py-7 border-b border-[#cbd0c7] dark:border-slate-700 group"
             >
-              <div className="flex items-center justify-between text-sm text-slate-500 dark:text-slate-400 mb-3">
-                <span>
+              <div className="font-mono text-xs text-slate-500 dark:text-slate-400">
+                <span className="text-[#e85d3f] block mb-1">NOTE</span>
                   {new Date(post.date).toLocaleDateString("en-US", {
                     month: "short",
                     day: "numeric",
                     year: "numeric",
                   })}
-                </span>
-                <span>{post.readingTime} min read</span>
               </div>
 
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2 transition-colors">
+              <div>
+              <h3 className="text-2xl font-bold tracking-tight text-[#142326] dark:text-white mb-2 transition-colors">
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="group-hover:text-blue-600 dark:group-hover:text-blue-400 block"
+                  className="group-hover:text-[#e85d3f] block"
                 >
                   {post.title}
                 </Link>
               </h3>
 
-              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 flex-grow">
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed max-w-2xl">
                 {post.excerpt}
               </p>
+              </div>
 
-              <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-200 dark:border-slate-700">
+              <div className="flex flex-col items-start md:items-end gap-3">
+                <span className="font-mono text-xs text-slate-500">{post.readingTime} min read</span>
+                <div className="flex flex-wrap md:justify-end gap-2">
                 {post.tags.map((tag) => (
                   <Link
                     key={tag}
@@ -51,6 +53,7 @@ export default async function BlogSection() {
                     {tag}
                   </Link>
                 ))}
+                </div>
               </div>
             </article>
           ))}

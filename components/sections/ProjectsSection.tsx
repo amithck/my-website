@@ -17,55 +17,63 @@ export default function ProjectsSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="space-y-5">
           {featured.map((project) => (
-            <div key={project.id} className="card card-hover card-p group">
-              {/* Header */}
-              <div className="mb-4">
-                <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                  {project.title}
-                </h3>
-                {project.year && (
-                  <p className="text-sm text-slate-500 dark:text-slate-400">
-                    {project.year}
-                  </p>
-                )}
-              </div>
-
-              {/* Description */}
-              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
-                {project.description}
-              </p>
-
-              {/* Highlights */}
-              {project.highlights && project.highlights.length > 0 && (
-                <ul className="space-y-1 mb-4 text-sm">
-                  {project.highlights.slice(0, 2).map((highlight, idx) => (
-                    <li
-                      key={idx}
-                      className="text-slate-600 dark:text-slate-400 flex items-start gap-2"
-                    >
-                      <span className="text-blue-600 dark:text-blue-400">
-                        ✓
-                      </span>
-                      <span>{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-
-              {/* Technologies */}
-              <div className="flex flex-wrap gap-2 mb-6 py-4 border-t border-slate-200 dark:border-slate-700">
-                {project.technologies.map((tech, idx) => (
-                  <span key={idx} className="badge badge-primary text-xs">
-                    {tech}
+            <details key={project.id} className="group border-y border-[#cbd0c7] dark:border-slate-700">
+              <summary className="list-none cursor-pointer py-7 sm:py-8">
+                <div className="grid lg:grid-cols-[5rem_1fr_auto] gap-4 lg:gap-8 items-start">
+                  <span className="font-mono text-xs text-[#e85d3f]">{project.year ?? "--"}</span>
+                  <div>
+                    <h3 className="text-xl sm:text-3xl font-bold tracking-tight text-[#142326] dark:text-white group-hover:text-[#e85d3f] transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mt-3 max-w-3xl">
+                      {project.description}
+                    </p>
+                  </div>
+                  <span className="font-mono text-xs uppercase tracking-widest text-slate-500 group-open:text-[#e85d3f]">
+                    <span className="group-open:hidden">Open +</span>
+                    <span className="hidden group-open:inline">Close -</span>
                   </span>
-                ))}
+                </div>
+              </summary>
+
+              <div className="grid lg:grid-cols-[5rem_1fr] gap-4 lg:gap-8 pb-8">
+                <span aria-hidden="true" />
+                <div className="grid md:grid-cols-[1.2fr_0.8fr] gap-8 border-t border-[#cbd0c7] dark:border-slate-700 pt-6">
+                  <div>
+                    <p className="font-mono text-[11px] uppercase tracking-widest text-[#e85d3f] mb-3">Research note</p>
+                    <p className="text-slate-700 dark:text-slate-300 text-sm leading-7">
+                      {project.longDescription || project.description}
+                    </p>
+                    {project.highlights && project.highlights.length > 0 && (
+                      <ul className="space-y-2 mt-6 text-sm">
+                        {project.highlights.map((highlight, idx) => (
+                          <li key={idx} className="text-slate-700 dark:text-slate-300 flex items-start gap-3">
+                            <span className="text-[#e85d3f] font-mono">0{idx + 1}</span>
+                            <span>{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                  <div>
+                    <p className="font-mono text-[11px] uppercase tracking-widest text-[#e85d3f] mb-3">Field notes</p>
+                    <p className="font-mono text-xs text-slate-500 dark:text-slate-400 mb-5">
+                      {project.startDate || "No start date"} {project.endDate ? `— ${project.endDate}` : ""}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, idx) => (
+                        <span key={idx} className="badge badge-secondary">{tech}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Links */}
               {project.links && Object.keys(project.links).length > 0 && (
-                <div className="flex gap-3 pt-4 border-t border-slate-200 dark:border-slate-700">
+                <div className="flex gap-3 pl-[calc(5rem+2rem)] pb-8">
                   {project.links.github && (
                     <a
                       href={project.links.github}
@@ -137,7 +145,7 @@ export default function ProjectsSection() {
                   )}
                 </div>
               )}
-            </div>
+            </details>
           ))}
         </div>
 

@@ -17,9 +17,11 @@ export default function PublicationsSection() {
       <div className="container-narrow">
         <h2 className="section-title">Publications</h2>
 
-        <div className="space-y-6">
-          {publications.map((pub) => (
-            <div key={pub.id} className="card card-p">
+        <div className="border-t border-[#cbd0c7] dark:border-slate-700">
+          {publications.map((pub, idx) => (
+            <article key={pub.id} className="grid md:grid-cols-[7rem_1fr_auto] gap-5 md:gap-10 py-8 border-b border-[#cbd0c7] dark:border-slate-700 group">
+              <div className="font-mono text-xs text-[#e85d3f]">0{idx + 1}<br /><span className="text-slate-500">{pub.year}</span></div>
+              <div>
               {/* Title */}
               {pub.url ? (
                 <a
@@ -28,7 +30,7 @@ export default function PublicationsSection() {
                   rel="noopener noreferrer"
                   className="block group mb-3"
                 >
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-2xl font-bold tracking-tight text-[#142326] dark:text-white group-hover:text-[#e85d3f] transition-colors">
                     {pub.title}
                   </h3>
                 </a>
@@ -39,7 +41,7 @@ export default function PublicationsSection() {
               )}
 
               {/* Metadata */}
-              <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-3">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-sm text-[#e85d3f] mb-3">
                 <p>{pub.venue}</p>
                 <span className="hidden sm:inline text-slate-400 dark:text-slate-600">
                   •
@@ -69,13 +71,13 @@ export default function PublicationsSection() {
                 </p>
               )}
 
-              {/* Links */}
+              <div className="md:col-start-2">
               {pub.url && (
                 <a
                   href={pub.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-[#e85d3f] hover:text-[#142326] transition-colors"
                 >
                   Read Publication
                   <svg
@@ -93,7 +95,9 @@ export default function PublicationsSection() {
                   </svg>
                 </a>
               )}
-            </div>
+              </div>
+              </div>
+            </article>
           ))}
         </div>
       </div>

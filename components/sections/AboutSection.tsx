@@ -14,7 +14,7 @@ export default function AboutSection() {
       <div className="container-narrow">
         <h2 className="section-title">About Me</h2>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-16 items-start">
           {/* Text Content */}
           <div className="space-y-6">
             <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -40,70 +40,53 @@ export default function AboutSection() {
             </p>
           </div>
 
-          {/* Education & Stats */}
-          <div className="space-y-8">
-            {/* Education Card */}
-            <div className="card card-p">
-              <h3 className="font-semibold text-slate-900 dark:text-white mb-2">
-                Education
-              </h3>
-              <div className="space-y-5">
+          <div>
+            <h3 className="font-mono text-xs uppercase tracking-[0.22em] text-[#e85d3f] mb-5">Education / 02 records</h3>
+            <div className="border-t border-[#cbd0c7] dark:border-slate-700">
                 {education.map((edu) => (
-                  <div key={`${edu.school}-${edu.degree}`}>
-                    <p className="font-medium text-slate-900 dark:text-white">
+                  <div key={`${edu.school}-${edu.degree}`} className="py-6 border-b border-[#cbd0c7] dark:border-slate-700">
+                    <p className="text-xl font-bold tracking-tight text-[#142326] dark:text-white">
                       {edu.degree} in {edu.field}
                     </p>
-                    <p className="text-sm text-slate-600 dark:text-slate-400">
+                    <p className="text-sm text-[#e85d3f] mt-2">
                       {edu.school}
                     </p>
-                    <p className="text-sm text-slate-500 dark:text-slate-500 mt-2">
+                    <p className="font-mono text-xs text-slate-500 dark:text-slate-400 mt-3">
                       {edu.startDate} — {edu.endDate}
                     </p>
                     {edu.gpa && (
-                      <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">
+                      <p className="font-mono text-xs text-slate-600 dark:text-slate-300 mt-3">
                         <span className="font-medium">{edu.degree.includes('Master') ? 'GPA' : 'CGPA'}:</span>{' '}
                         {edu.gpa}
                       </p>
                     )}
                   </div>
                 ))}
-              </div>
             </div>
 
-            {/* Highlights */}
-            <div className="card card-p">
-              <h3 className="font-semibold text-slate-900 dark:text-white mb-4">
-                Expertise
-              </h3>
-              <ul className="space-y-3">
+            <div className="mt-12">
+              <h3 className="font-mono text-xs uppercase tracking-[0.22em] text-[#e85d3f] mb-5">Working interests</h3>
+              <ul className="border-t border-[#cbd0c7] dark:border-slate-700">
                 <li className="flex items-start gap-3">
-                  <span className="text-blue-600 dark:text-blue-400 font-bold text-lg leading-none mt-0.5">
-                    →
-                  </span>
+                  <span className="font-mono text-xs text-[#e85d3f]">01</span>
                   <span className="text-slate-700 dark:text-slate-300">
                     Backend systems & microservices architecture
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-blue-600 dark:text-blue-400 font-bold text-lg leading-none mt-0.5">
-                    →
-                  </span>
+                  <span className="font-mono text-xs text-[#e85d3f]">02</span>
                   <span className="text-slate-700 dark:text-slate-300">
                     Distributed systems at scale
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-blue-600 dark:text-blue-400 font-bold text-lg leading-none mt-0.5">
-                    →
-                  </span>
+                  <span className="font-mono text-xs text-[#e85d3f]">03</span>
                   <span className="text-slate-700 dark:text-slate-300">
                     Computer vision & machine learning
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-blue-600 dark:text-blue-400 font-bold text-lg leading-none mt-0.5">
-                    →
-                  </span>
+                  <span className="font-mono text-xs text-[#e85d3f]">04</span>
                   <span className="text-slate-700 dark:text-slate-300">
                     Cloud infrastructure & DevOps
                   </span>

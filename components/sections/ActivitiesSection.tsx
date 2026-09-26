@@ -14,19 +14,21 @@ export default function ActivitiesSection() {
       <div className="container-narrow">
         <h2 className="section-title">Activities</h2>
 
-        <div className="space-y-8">
+        <div className="border-t border-[#cbd0c7] dark:border-slate-700">
           {activities.map((activity, idx) => (
-            <div key={idx} className="card card-hover card-p">
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+            <article key={idx} className="grid lg:grid-cols-[7rem_1fr] gap-6 lg:gap-12 py-8 border-b border-[#cbd0c7] dark:border-slate-700 group">
+              <div className="font-mono text-xs text-[#e85d3f]">0{idx + 1}<br /><span className="text-slate-500">{activity.startDate}</span></div>
+              <div>
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                 <div>
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+                  <h3 className="text-2xl font-bold tracking-tight text-[#142326] dark:text-white group-hover:text-[#e85d3f] transition-colors">
                     {activity.role}
                   </h3>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium">
+                  <p className="text-[#e85d3f] font-medium mt-1">
                     {activity.organization}
                   </p>
                 </div>
-                <div className="text-sm text-slate-500 dark:text-slate-400 whitespace-nowrap">
+                <div className="font-mono text-xs text-slate-500 dark:text-slate-400 whitespace-nowrap">
                   {activity.startDate} — {activity.endDate}
                 </div>
               </div>
@@ -43,14 +45,13 @@ export default function ActivitiesSection() {
                     key={idx}
                     className="text-slate-700 dark:text-slate-300 text-sm flex items-start gap-3"
                   >
-                    <span className="text-blue-600 dark:text-blue-400 font-bold mt-1">
-                      •
-                    </span>
+                    <span className="text-[#e85d3f] mt-1">+</span>
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-            </div>
+              </div>
+            </article>
           ))}
         </div>
       </div>

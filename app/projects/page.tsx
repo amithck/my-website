@@ -42,12 +42,12 @@ export default function ProjectsPage() {
         </p>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="border-t border-[#cbd0c7] dark:border-slate-700">
           {projects.map((project) => (
-            <div key={project.id} className="card card-hover card-p group">
+            <div key={project.id} className="py-8 border-b border-[#cbd0c7] dark:border-slate-700 group">
               {/* Header */}
               <div className="mb-4">
-                <h2 className="text-xl font-semibold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-[#e85d3f] transition-colors">
                   {project.title}
                 </h2>
                 {project.year && (

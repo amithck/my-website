@@ -18,20 +18,21 @@ export default function Navigation() {
     { href: "#projects", label: "Projects" },
     { href: "#publications", label: "Publications" },
     { href: "#skills", label: "Skills" },
+    { href: "#activities", label: "Activities" },
     { href: "#blog", label: "Blog" },
     { href: "#contact", label: "Contact" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#f4f1ea]/90 dark:bg-[#101b1d]/90 backdrop-blur-md border-b border-[#cbd0c7] dark:border-slate-700">
       <div className="container-wide">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link
             href="/"
-            className="font-bold text-xl gradient-text hover:opacity-80 transition-opacity"
+            className="font-mono text-sm font-medium tracking-tight text-[#142326] dark:text-white hover:text-[#e85d3f] transition-colors"
           >
-            ACK
+            ACK / 01
           </Link>
 
           {/* Desktop Navigation */}
@@ -40,7 +41,7 @@ export default function Navigation() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-lg transition-colors"
+                className="font-mono text-[11px] uppercase tracking-widest text-slate-600 dark:text-slate-400 hover:text-[#e85d3f] px-3 py-2 transition-colors"
               >
                 {item.label}
               </a>

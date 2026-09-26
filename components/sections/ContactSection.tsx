@@ -73,15 +73,15 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-x-10 border-y border-[#cbd0c7] dark:border-slate-700 mb-12">
           {/* Email */}
           <a
             href={`mailto:${portfolioData.personalInfo.socials.email}`}
-            className="card card-hover card-p text-center group"
+            className="py-7 border-b md:border-b-0 md:border-r border-[#cbd0c7] dark:border-slate-700 group"
           >
-            <div className="w-12 h-12 mx-auto mb-4 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center group-hover:bg-blue-200 dark:group-hover:bg-blue-900/50 transition-colors">
+            <div className="mb-4 text-[#e85d3f]">
               <svg
-                className="w-6 h-6 text-blue-600 dark:text-blue-400"
+                className="w-6 h-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -108,11 +108,11 @@ export default function ContactSection() {
               href={portfolioData.personalInfo.socials.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="card card-hover card-p text-center group"
+              className="py-7 border-b md:border-b-0 md:border-r border-[#cbd0c7] dark:border-slate-700 group"
             >
-              <div className="w-12 h-12 mx-auto mb-4 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center group-hover:bg-blue-200 dark:group-hover:bg-blue-900/50 transition-colors">
+              <div className="mb-4 text-[#e85d3f]">
                 <svg
-                  className="w-6 h-6 text-blue-600 dark:text-blue-400"
+                  className="w-6 h-6"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -134,11 +134,11 @@ export default function ContactSection() {
               href={portfolioData.personalInfo.socials.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="card card-hover card-p text-center group"
+              className="py-7 group"
             >
-              <div className="w-12 h-12 mx-auto mb-4 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center group-hover:bg-blue-200 dark:group-hover:bg-blue-900/50 transition-colors">
+              <div className="mb-4 text-[#e85d3f]">
                 <svg
-                  className="w-6 h-6 text-blue-600 dark:text-blue-400"
+                  className="w-6 h-6"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -156,10 +156,10 @@ export default function ContactSection() {
         </div>
 
         {/* Contact Form */}
-        <div className="max-w-2xl mx-auto card card-p">
+        <div className="max-w-3xl mx-auto border-t-2 border-[#142326] dark:border-slate-300 pt-8">
           {submitted ? (
             <div className="py-8 text-center">
-              <div className="w-12 h-12 mx-auto mb-4 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+              <div className="mb-4 text-[#e85d3f]">
                 <svg
                   className="w-6 h-6 text-green-600 dark:text-green-400"
                   fill="none"
@@ -198,7 +198,7 @@ export default function ContactSection() {
                     value={formState.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                    className="w-full px-0 py-3 border-0 border-b border-[#cbd0c7] dark:border-slate-700 bg-transparent text-slate-900 dark:text-white focus:outline-none focus:border-[#e85d3f] transition-all"
                     placeholder="Your name"
                   />
                 </div>
@@ -216,7 +216,7 @@ export default function ContactSection() {
                     value={formState.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                    className="w-full px-0 py-3 border-0 border-b border-[#cbd0c7] dark:border-slate-700 bg-transparent text-slate-900 dark:text-white focus:outline-none focus:border-[#e85d3f] transition-all"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -236,13 +236,13 @@ export default function ContactSection() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none"
+                  className="w-full px-0 py-3 border-0 border-b border-[#cbd0c7] dark:border-slate-700 bg-transparent text-slate-900 dark:text-white focus:outline-none focus:border-[#e85d3f] transition-all resize-none"
                   placeholder="Your message..."
                 />
               </div>
 
               {error && (
-                <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 mb-4">
+                <div className="border-l-2 border-red-500 bg-red-50 px-4 py-3 text-sm text-red-700 mb-4">
                   {error}
                 </div>
               )}

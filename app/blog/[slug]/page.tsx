@@ -71,8 +71,8 @@ export default async function BlogPostPage({
   const htmlContent = await marked(post.content);
 
   return (
-    <main className="pt-24 pb-12">
-      <div className="container-narrow max-w-3xl">
+    <main className="blog-page blog-article-page pt-24 pb-12">
+      <div className="container-narrow max-w-6xl">
         {/* Header */}
         <Link
           href="/blog"
@@ -95,13 +95,14 @@ export default async function BlogPostPage({
         </Link>
 
         {/* Title & Meta */}
-        <article>
-          <header className="mb-8">
-            <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+        <article className="blog-article">
+          <header className="blog-article-header mb-8">
+            <div className="blog-signal-line"><span /> TRANSMISSION / {post.readingTime} MINUTE READ</div>
+            <h1 className="blog-display text-4xl sm:text-6xl font-bold text-slate-900 dark:text-white mb-4">
               {post.title}
             </h1>
 
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-sm text-slate-600 dark:text-slate-400 pb-6 border-b border-slate-200 dark:border-slate-800">
+            <div className="blog-article-meta flex flex-col sm:flex-row sm:items-center gap-4 text-sm text-slate-600 dark:text-slate-400 pb-6 border-b border-slate-200 dark:border-slate-800">
               <time dateTime={post.date}>
                 {new Date(post.date).toLocaleDateString("en-US", {
                   month: "long",
@@ -118,7 +119,7 @@ export default async function BlogPostPage({
 
           {/* Content */}
           <div
-            className="prose dark:prose-invert prose-sm max-w-none"
+            className="blog-prose prose dark:prose-invert prose-sm max-w-none"
             dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
 

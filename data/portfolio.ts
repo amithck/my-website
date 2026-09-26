@@ -217,8 +217,24 @@ export const portfolioData: PortfolioData = {
       skills: ['Prometheus', 'Grafana', 'Alertmanager'],
     },
     {
-      name: 'AI/ML',
-      skills: ['Deep Learning', 'Computer Vision', 'Time Series Analysis', 'Predictive Analysis'],
+      name: 'Version Control',
+      skills: ['Git', 'GitHub', 'GitLab'],
+    },
+    {
+      name: 'Machine Learning',
+      skills: [
+        'PyTorch',
+        'TensorFlow',
+        'NumPy',
+        'Pandas',
+        'Scikit-learn',
+        'OpenCV',
+        'HuggingFace',
+        'Deep Learning',
+        'Computer Vision',
+        'Time Series Analysis',
+        'Predictive Analysis',
+      ],
     },
   ],
   awards: [
